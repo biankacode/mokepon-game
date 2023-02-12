@@ -1,0 +1,20 @@
+{
+  "name": "mokepongame",
+  "version": "1.0.0",
+  "description": "This is a mokepon game developed in vanillaJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leolicona/mokepon-game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leolicona/mokepon-game/issues"
+  },
+  "homepage": "https://github.com/leolicona/mokepon-game#readme"
+}
