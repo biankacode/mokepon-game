@@ -14,20 +14,20 @@ function seleccionarMascotaJugador() {
    let inputLangostevis = document.getElementById('langostevis');
    let inputTucapalma = document.getElementById('tucapalma');
    let inputPydos = document.getElementById('pydos');
-
+   let spanMascotaJugador = document.getElementById('mascotaJugador')
    
     if  ( inputhHipodoge.checked) {
-            alert('Seleccionaste a HIPODOGE');
+            spanMascotaJugador.innerHTML = 'Hipodoge';
     } else if (inputCapipepo.checked){
-            alert('Seleccionaste a CAPIPEPO')
+            spanMascotaJugador.innerHTML = 'Capipepo';
     } else if (inputRatigueya.checked){
-            alert('Seleccionaste a RATIGUEYA')
+            spanMascotaJugador.innerHTML = 'Ratigueya';
     } else if (inputLangostevis.checked){
-            alert('Seleccionaste a LANGOSTELVIS')
+            spanMascotaJugador.innerHTML = 'Langostevis';
     } else if (inputTucapalma.checked){
-        alert('Seleccionaste a TUCAPALMA')
+            spanMascotaJugador.innerHTML = 'Tucapalma';
     } else if (inputPydos.checked){
-        alert('Seleccionaste a PYDOS')
+            spanMascotaJugador.innerHTML = 'Pydos';
     } else {
         alert('....✺SELECCIONA UNA MASCOTA✺....')
     }
