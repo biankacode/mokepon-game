@@ -20,23 +20,15 @@ function seleccionarMascotaJugador() {
    let inputhHipodoge = document.getElementById('hipodoge');
    let inputCapipepo = document.getElementById('capipepo');
    let inputRatigueya = document.getElementById('ratigueya');
-   let inputLangostevis = document.getElementById('langostevis');
-   let inputTucapalma = document.getElementById('tucapalma');
-   let inputPydos = document.getElementById('pydos');
-   let spanMascotaJugador = document.getElementById('mascotaJugador')
+  
+   let spanMascotaJugador = document.getElementById('mascotaJugador');
    
     if  ( inputhHipodoge.checked) {
-            spanMascotaJugador.innerHTML = 'Hipodoge';
+            spanMascotaJugador.innerHTML = 'Hipodoge'
     } else if (inputCapipepo.checked){
-            spanMascotaJugador.innerHTML = 'Capipepo';
+            spanMascotaJugador.innerHTML = 'Capipepo'
     } else if (inputRatigueya.checked){
-            spanMascotaJugador.innerHTML = 'Ratigueya';
-    } else if (inputLangostevis.checked){
-            spanMascotaJugador.innerHTML = 'Langostevis';
-    } else if (inputTucapalma.checked){
-            spanMascotaJugador.innerHTML = 'Tucapalma';
-    } else if (inputPydos.checked){
-            spanMascotaJugador.innerHTML = 'Pydos';
+            spanMascotaJugador.innerHTML = 'Ratigueya'
     } else {
         alert('....✺SELECCIONA UNA MASCOTA✺....')
     }
@@ -44,7 +36,7 @@ function seleccionarMascotaJugador() {
 }
 
 function seleccionarMascotaEnemigo() {
-    let mascotaAleatoria = aleatorio(1,6)
+    let mascotaAleatoria = aleatorio(1,3)
     let spanMascotaEnemigo = document.getElementById('mascotaEnemigo')
 
     if (mascotaAleatoria == 1){
@@ -53,20 +45,11 @@ function seleccionarMascotaEnemigo() {
     }else if (mascotaAleatoria == 2){
         spanMascotaEnemigo.innerHTML = 'Capipepo '
 
-    }else if (mascotaAleatoria == 3) {
+    }else {
         spanMascotaEnemigo.innerHTML = 'Ratigueya '
-
-    }else if (mascotaAleatoria == 4) {
-         spanMascotaEnemigo.innerHTML = 'Langostevis '
-
-    }else if (mascotaAleatoria == 5) {
-         spanMascotaEnemigo.innerHTML = 'Tucapalma '
-
-    }else if (mascotaAleatoria == 6) {
-         spanMascotaEnemigo.innerHTML = 'Pydos '
-
-    } 
+    }
 }
+
 function ataqueFuego () {
     ataqueJugador = 'Fuego'
     ataqueAleatorioEnemigo()
@@ -80,27 +63,31 @@ function ataqueTierra () {
     ataqueAleatorioEnemigo()
 }
 
-function ataqueAleatorioEnemigo(params) {
-    let ataqueAleatorio = aleatorio(1,6)
+
+function ataqueAleatorioEnemigo() {
+    let ataqueAleatorio = aleatorio(1,3)
+    /* console.log(ataqueAleatorio, 'Si sirve'); */
 
     if (ataqueAleatorio == 1) {
         ataqueEnemigo = 'FUEGO'
     }
     else if(ataqueAleatorio == 2){
-        ataqueEnemigo == 'AGUA'
+        ataqueEnemigo = 'AGUA'
     }
-    else if(ataqueAleatorio == 3){
-        ataqueEnemigo == 'TIERRRA'
+    else {
+        ataqueEnemigo = 'TIERRRA'
     }
-    else if(ataqueAleatorio == 4){
-        ataqueEnemigo == 'FUEGO & AGUA '
-    }
-    else if(ataqueAleatorio == 5){
-        ataqueEnemigo == 'AGUA & TIERRA'
-    }
-    else if(ataqueAleatorio == 6){
-        ataqueEnemigo == 'TIERRA Y FUEGO'
-    }
+  
+    crearMensaje()
+}
+
+function crearMensaje() {
+    let sectionMensaje = document.getElementById('mensajes'
+    )
+    let parrafo = document.createElement('p');
+    parrafo.innerHTML ='Tu mascota ataco con ' + ataqueJugador + ' La mascota del enemigo ataco con ' + ataqueEnemigo + ' Pendiente';
+    sectionMensaje.appendChild(parrafo)
+
 }
 
 function aleatorio(min, max) {
