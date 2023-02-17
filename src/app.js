@@ -1,6 +1,10 @@
 let ataqueJugador 
 let ataqueEnemigo
-let resultado
+let vidasJugador = 3
+let vidasEnemigo = 3 
+
+
+
 
 
 function iniciarJuego() {
@@ -83,18 +87,28 @@ function ataqueAleatorioEnemigo() {
 }
 
 function combate() {
-  
+    let spanVidasJugador = document.getElementById('vidasJugador')
+    let spanVidasEnemigo = document.getElementById('vidasEnemigo')
+
     if(ataqueEnemigo == ataqueJugador ){
         crearMensaje(' ☾ EMPATE ☽ ')
+       
     } else if (ataqueJugador == 'FUEGO' && ataqueEnemigo == 'TIERRA'){
         crearMensaje('★ GANE ★')
+        vidasEnemigo --
+        spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if (ataqueJugador == 'AGUA' && ataqueEnemigo == 'FUEGO'){
         crearMensaje('★ GANE ★')
+        vidasEnemigo --
+        spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if (ataqueJugador == 'TIERRA' && ataqueEnemigo == 'AGUA'){
         crearMensaje('★ GANE ★')
+        vidasEnemigo --
+        spanVidasEnemigo.innerHTML = vidasEnemigo
     } else {
-        crearMensaje(' ♒︎ Perdiste ♒︎ 😝')
-
+        crearMensaje(' ♒︎ PERDISTE ♒︎ 😝')
+        vidasJugador --
+        spanVidasJugador.innerHTML = vidasJugador
     }
 }
 
