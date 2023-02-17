@@ -3,10 +3,6 @@ let ataqueEnemigo
 let vidasJugador = 3
 let vidasEnemigo = 3 
 
-
-
-
-
 function iniciarJuego() {
     let selecionarMascota = document.getElementById('seleccionar-mascota');
 selecionarMascota.addEventListener('click', seleccionarMascotaJugador);
@@ -92,7 +88,6 @@ function combate() {
 
     if(ataqueEnemigo == ataqueJugador ){
         crearMensaje(' ☾ EMPATE ☽ ')
-       
     } else if (ataqueJugador == 'FUEGO' && ataqueEnemigo == 'TIERRA'){
         crearMensaje('★ GANE ★')
         vidasEnemigo --
@@ -110,13 +105,32 @@ function combate() {
         vidasJugador --
         spanVidasJugador.innerHTML = vidasJugador
     }
+    revisarVidas()
 }
 
+
+function revisarVidas() {
+    if (vidasEnemigo == 0) {
+        mensajeFinal('GANASTE ESTA PARTIDA YEEEEiii!!!')
+    } else if( vidasJugador == 0){
+        mensajeFinal('PERDISTE, SUERTE PARA LA PROXIMA!!!!')
+    }
+
+}
 function crearMensaje(resultado) {
     let sectionMensaje = document.getElementById('mensajes'
     )
     let parrafo = document.createElement('p');
     parrafo.innerHTML ='Tu mascota ataco con ' + ataqueJugador + ' La mascota del enemigo ataco con ' + ataqueEnemigo + ' '+ resultado;
+    sectionMensaje.appendChild(parrafo)
+}
+
+function mensajeFinal(resultadoFinal) {
+    let sectionMensaje = document.getElementById('mensajes'
+    )
+    let parrafo = document.createElement('p');
+    parrafo.innerHTML = resultadoFinal
+    
     sectionMensaje.appendChild(parrafo)
 }
 
