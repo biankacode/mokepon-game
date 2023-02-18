@@ -4,6 +4,13 @@ let vidasJugador = 3
 let vidasEnemigo = 3 
 
 function iniciarJuego() {
+
+    let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
+    sectionSeleccionarAtaque.style.display = 'none' // ocultar secciones de html que no ocupemos hata despues
+
+    let sectionReiniciar = document.getElementById('reiniciar') // se oculta el boton de reiniciar
+    sectionReiniciar.style.display = 'none'
+
     let selecionarMascota = document.getElementById('seleccionar-mascota');
     selecionarMascota.addEventListener('click', seleccionarMascotaJugador);
 
@@ -21,6 +28,14 @@ function iniciarJuego() {
 }
 
 function seleccionarMascotaJugador() {
+
+    let sectionSeleccionarMascota = document.getElementById('mascotas')
+    sectionSeleccionarMascota.style.display = 'none' 
+
+    let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
+    sectionSeleccionarAtaque.style.display = 'block'// aqui reaparece la seccion que se desaparecio al inicio
+   
+
    let inputhHipodoge = document.getElementById('hipodoge');
    let inputCapipepo = document.getElementById('capipepo');
    let inputRatigueya = document.getElementById('ratigueya');
@@ -144,6 +159,9 @@ function mensajeFinal(resultadoFinal) {
 
     let botonTierra = document.getElementById('btnTierra')
     botonTierra.disabled  = true // desabilita el boton
+
+    let sectionReiniciar = document.getElementById('reiniciar')
+    sectionReiniciar.style.display = 'block' // se muestra el boton de reiniciar 
 }
 
 function reiciarJuego() {
