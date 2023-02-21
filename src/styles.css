@@ -1,27 +1,35 @@
-.titulo{
-    color: green;
+#titulo{
+    color: #219ebc;
     width: 310px;
     height: 50px;
-    background-color: yellowgreen;
+    background-color:#ffb703;
     border-radius: 15px;
 }
-label{
-    background-color: aquamarine;
 
-}
-input{ 
-    background-color: antiquewhite;
-    
-}
-button{
-    background-color: grey;
+#mascotas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
 }
 
-#seleccionar-ataque{
-   /*  display: none; */
+.tarjeta-mokepon{
+    color:aliceblue;
+    width: 100px;
+    height: 100px;
+    background-color: #219ebc;
+    padding: 10px;
+    border: 10px solid yellowgreen;
+    margin: 10px;
+
 }
 
-.toggle-ataque  {
+input{
     display: none;
 }
-
+#seleccionar-ataque{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
