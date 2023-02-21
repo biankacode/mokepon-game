@@ -6,7 +6,7 @@ let vidasEnemigo = 3
 function iniciarJuego() {
 
     let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
-    sectionSeleccionarAtaque.style.display = 'none' // ocultar secciones de html que no ocupemos hata despues
+    sectionSeleccionarAtaque.style.display = 'none' // ocultar secciones de html que no ocupemos hasta despues
 
     let sectionReiniciar = document.getElementById('reiniciar') // se oculta el boton de reiniciar
     sectionReiniciar.style.display = 'none'

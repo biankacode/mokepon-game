@@ -14,14 +14,14 @@ input{
     
 }
 button{
-    background-color: blue;
+    background-color: grey;
 }
 
 #seleccionar-ataque{
    /*  display: none; */
 }
 
-.toggle-ataque {
+.toggle-ataque  {
     display: none;
 }
 
