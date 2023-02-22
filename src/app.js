@@ -33,7 +33,7 @@ function seleccionarMascotaJugador() {
     sectionSeleccionarMascota.style.display = 'none' 
 
     let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
-    sectionSeleccionarAtaque.style.display = 'block'// aqui reaparece la seccion que se desaparecio al inicio
+    sectionSeleccionarAtaque.style.display = 'flex'// aqui reaparece la seccion que se desaparecio al inicio
    
 
    let inputhHipodoge = document.getElementById('hipodoge');
