@@ -1,11 +1,9 @@
-#titulo{
-    color: #219ebc;
-    width: 310px;
-    height: 50px;
-    background-color:#ffb703;
-    border-radius: 15px;
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@300;500;700&display=swap');
+body{
+   /*  background-image:url(https://images.rawpixel.com/image_600/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvdjExNDctYmctMDQtMmMta3p6MW1rdWouanBn.jpg); */
+   /*  background-size: cover; */
+   background-color: #EAE0DA;
 }
-
 #mascotas{
     display: flex;
     flex-direction: column;
@@ -13,23 +11,59 @@
     align-items: center;   
 }
 
-.tarjeta-mokepon{
-    color:aliceblue;
-    width: 100px;
-    height: 100px;
-    background-color: #219ebc;
-    padding: 10px;
-    border: 10px solid yellowgreen;
-    margin: 10px;
+#titulo{
+    color: #A0C3D2;
+    font-family: 'Fredoka One', cursive;
+    font-size: 60px;
 
+}
+.subtitulo{
+    color: #A0C3D2;
+    font-family: 'Fredoka One', cursive;
+}
+
+.tarjetas{
+    display: flex;
+}
+
+.tarjeta-mokepon{
+    color:#EAE0DA;
+    width: 180px;
+    height: 100px;
+    background-color: #A0C3D2;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    font-family: 'Fredoka One', cursive;
+    border-radius: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.tarjeta-mokepon img{
+    width: 100px ;
 }
 
 input{
     display: none;
 }
-#seleccionar-ataque{
+
+.buton-seleccionar{
+
+ color: #EAC7C7;
+ background-color: #EAE0DA;
+ width: 100px;
+ height: 50px;
+ border-radius: 10px;
+ border: 0;
+ font-family: 'Fredoka One', cursive;
+ margin-top: 30px;
+}
+
+
+/* #seleccionar-ataque{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;  
-}
+} */
