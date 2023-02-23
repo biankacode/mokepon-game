@@ -90,17 +90,39 @@ input{
     justify-content: center;
     align-items: center;  
 } 
- .boton-ataques{
+
+.boton-ataques{
     width: 100px;
     height: 100px;
     background-color: #A0C3D2;
     border-radius: 10px;
     padding: 10px;
-    box-sizing: border-box;
     border-radius: 10px;
     border: transparent;
     
  }
- .boton-ataques img{
+.boton-ataques img{
     max-width: 50px;
  }
+
+#mensajes { 
+    width: 180px;
+    height: 80px;
+    background: #A0C3D2 ;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-family: 'Fredoka One', cursive;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#buttonReiniciar{
+border: none;
+color: #EAE0DA;
+background-color: transparent;
+font-family: 'Monoton', cursive;
+
+}
