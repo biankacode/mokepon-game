@@ -96,27 +96,29 @@ input{
     height: 100px;
     background-color: #A0C3D2;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
     border: transparent;
     
  }
 .boton-ataques img{
     max-width: 50px;
+    /* object-fit: cover; */
+    overflow: clip;
  }
 
 #mensajes { 
     width: 180px;
     height: 80px;
+    font-family: 'Fredoka One', cursive;
     background: #A0C3D2 ;
     padding: 20px;
     margin-top: 20px;
     border-radius: 10px;
-    font-family: 'Fredoka One', cursive;
     display: flex;
     align-items: center;
     flex-direction: column;
-
+    /* overflow: clip; */
 }
 
 #buttonReiniciar{
@@ -124,5 +126,9 @@ border: none;
 color: #EAE0DA;
 background-color: transparent;
 font-family: 'Monoton', cursive;
+}
 
+.ataques{
+    display: grid;
+    grid-template-columns: 100px 100px;
 }
