@@ -107,15 +107,15 @@ function combate() {
     if(ataqueEnemigo == ataqueJugador ){
         crearMensaje('EMPATE')
     } else if (ataqueJugador == 'FUEGO' && ataqueEnemigo == 'TIERRA'){
-        crearMensaje('GANE')
+        crearMensaje('GANASTE')
         vidasEnemigo --
         spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if (ataqueJugador == 'AGUA' && ataqueEnemigo == 'FUEGO'){
-        crearMensaje('GANE')
+        crearMensaje('GANASTE')
         vidasEnemigo --
         spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if (ataqueJugador == 'TIERRA' && ataqueEnemigo == 'AGUA'){
-        crearMensaje('GANE')
+        crearMensaje('GANASTE')
         vidasEnemigo --
         spanVidasEnemigo.innerHTML = vidasEnemigo
     } else {
