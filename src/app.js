@@ -22,7 +22,7 @@ const sectionMensaje = document.getElementById('resultado')
 const ataquesJugador = document.getElementById('ataquesJugador')
 const ataquesEnemigo = document.getElementById('ataquesEnemigo') 
 
-
+let mokepones = []
 let ataqueJugador 
 let ataqueEnemigo
 let vidasJugador = 3
@@ -38,7 +38,14 @@ class Mokepon{
 
 let hipodoge = new Mokepon('Hipodoge','./imagenes/hipodoge_attack.png','5')
 
-console.log(hipodoge);
+let capipepo = new
+Mokepon('Capipepo','./imagenes/capipepo_attack.png','3')
+
+let ratigueya = new Mokepon('Ratyguella','./imagenes/ratigueya_attack.png','3')
+
+mokepones.push(hipodoge,capipepo,ratigueya)
+
+console.log(mokepones);
 
 function iniciarJuego() { 
     sectionSeleccionarAtaque.style.display = 'none' // ocultar secciones de html que no ocupemos hasta despues // se oculta el boton de reiniciar
