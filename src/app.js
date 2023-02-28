@@ -33,6 +33,7 @@ class Mokepon{
         this.nombre = nombre
         this.foto = foto
         this.vida = vida
+       this.ataques = []
     }
 }
 
@@ -43,10 +44,29 @@ Mokepon('Capipepo','./imagenes/capipepo_attack.png','3')
 
 let ratigueya = new Mokepon('Ratyguella','./imagenes/ratigueya_attack.png','3')
 
-mokepones.push(hipodoge,capipepo,ratigueya)
+hipodoge.ataques.push( //Se inyecta la info de los ataques en sus arreglo de ataques  
+    {nombre:'💧', id: 'btnAgua'},
+    {nombre:'💧', id: 'btnAgua'},
+    {nombre:'💧', id: 'btnAgua'},
+    {nombre:'🔥', id: 'btnFuego'},
+    {nombre:'🌱', id: 'btnTierra'},
+)
 
-console.log(mokepones);
+capipepo.ataques.push(
+    {nombre:'🔥', id: 'btnFuego'},
+    {nombre:'🔥', id: 'btnFuego'},
+    {nombre:'🔥', id: 'btnFuego'},
+    {nombre:'💧', id: 'btnAgua'},
+    {nombre:'🌱', id: 'btnTierra'},
+)
 
+ratigueya.ataques.push(
+    {nombre:'🌱', id: 'btnTierra'},
+    {nombre:'🌱', id: 'btnTierra'},
+    {nombre:'🌱', id: 'btnTierra'},
+    {nombre:'🔥', id: 'btnFuego'},
+    {nombre:'💧', id: 'btnAgua'},
+    )
 function iniciarJuego() { 
     sectionSeleccionarAtaque.style.display = 'none' // ocultar secciones de html que no ocupemos hasta despues // se oculta el boton de reiniciar
     selecionarMascota.addEventListener('click', seleccionarMascotaJugador);
