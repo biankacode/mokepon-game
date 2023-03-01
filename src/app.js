@@ -27,6 +27,7 @@ let opcionDeMokepones
 let inputhHipodoge
 let inputCapipepo
 let inputRatigueya 
+let mascotaJugador
 let vidasJugador = 3
 let vidasEnemigo = 3 
 
@@ -105,14 +106,28 @@ function seleccionarMascotaJugador() {
     sectionSeleccionarAtaque.style.display = 'flex'// aqui reaparece la seccion que se desaparecio al inicio
     if  ( inputhHipodoge.checked) {
             spanMascotaJugador.innerHTML = inputhHipodoge.id
+            mascotaJugador = inputhHipodoge.id
     } else if (inputCapipepo.checked){
             spanMascotaJugador.innerHTML = inputCapipepo.id
+            mascotaJugador = inputCapipepo.id
     } else if (inputRatigueya.checked){
             spanMascotaJugador.innerHTML = inputRatigueya.id
+            mascotaJugador = inputRatigueya.id
     } else {
         alert('....✺SELECCIONA UNA MASCOTA✺....')
     }
+    estraerAtaques(mascotaJugador)
     seleccionarMascotaEnemigo()
+}
+
+function estraerAtaques(mascotaJugador) {
+    let ataques 
+    for (let i = 0; i < mokepones.length; i++) {
+        if (mascotaJugador === mokepones[i].nombre) {
+            ataques = mokepones[i].ataques          
+        }
+    }
+    console.log(ataques);
 }
 
 function seleccionarMascotaEnemigo() {
