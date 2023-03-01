@@ -69,7 +69,6 @@ ratigueya.ataques.push(
     {nombre:'💧', id: 'btnAgua'},
     {nombre:'🌱', id: 'btnTierra'},
 )
-
 // arreglo 
     mokepones.push(hipodoge, capipepo, ratigueya)
         // se genera el push de cada unode los mokepones de cada arreglo q se trabajo anteriormente
@@ -107,11 +106,11 @@ function seleccionarMascotaJugador() {
     sectionSeleccionarAtaque.style.display = 'flex'// aqui reaparece la seccion que se desaparecio al inicio
    
     if  ( inputhHipodoge.checked) {
-            spanMascotaJugador.innerHTML = 'Hipodoge'
+            spanMascotaJugador.innerHTML = inputhHipodoge.id
     } else if (inputCapipepo.checked){
-            spanMascotaJugador.innerHTML = 'Capipepo'
+            spanMascotaJugador.innerHTML = inputCapipepo.id
     } else if (inputRatigueya.checked){
-            spanMascotaJugador.innerHTML = 'Ratigueya'
+            spanMascotaJugador.innerHTML = inputRatigueya.id
     } else {
         alert('....✺SELECCIONA UNA MASCOTA✺....')
     }
