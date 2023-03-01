@@ -8,9 +8,6 @@ const botonAgua = document.getElementById('btnAgua')
 const botonReiniciar  = document.getElementById('buttonReiniciar')
 
 const sectionSeleccionarMascota = document.getElementById('mascotas')
-const inputhHipodoge = document.getElementById('hipodoge');
-const inputCapipepo = document.getElementById('capipepo');
-const inputRatigueya = document.getElementById('ratigueya');
 const spanMascotaJugador = document.getElementById('mascotaJugador');
 
 const spanMascotaEnemigo = document.getElementById('mascotaEnemigo')
@@ -27,6 +24,9 @@ let mokepones = []
 let ataqueJugador 
 let ataqueEnemigo
 let opcionDeMokepones
+let inputhHipodoge
+let inputCapipepo
+let inputRatigueya 
 let vidasJugador = 3
 let vidasEnemigo = 3 
 
@@ -86,6 +86,9 @@ function iniciarJuego() {
     `
 tarjetasContenedor.innerHTML += opcionDeMokepones
 
+     inputhHipodoge = document.getElementById('Hipodoge');
+     inputCapipepo = document.getElementById('Capipepo');
+     inputRatigueya = document.getElementById('Ratigueya');
 
     })
 
@@ -120,10 +123,10 @@ function seleccionarMascotaEnemigo() {
     
 
     if (mascotaAleatoria == 1){
-        spanMascotaEnemigo.innerHTML = 'hipodoge'
+        spanMascotaEnemigo.innerHTML = 'Hipodoge'
 
     }else if (mascotaAleatoria == 2){
-        spanMascotaEnemigo.innerHTML = 'capipepo'
+        spanMascotaEnemigo.innerHTML = 'Capipepo'
 
     }else {
         spanMascotaEnemigo.innerHTML = 'Ratigueya'
