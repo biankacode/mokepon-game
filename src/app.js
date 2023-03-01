@@ -21,15 +21,17 @@ const spanVidasEnemigo = document.getElementById('vidasEnemigo')
 const sectionMensaje = document.getElementById('resultado')
 const ataquesJugador = document.getElementById('ataquesJugador')
 const ataquesEnemigo = document.getElementById('ataquesEnemigo') 
+const tarjetasContenedor = document.getElementById('contenedorTarjetas')
 
 let mokepones = []
 let ataqueJugador 
 let ataqueEnemigo
+let opcionDeMokepones
 let vidasJugador = 3
 let vidasEnemigo = 3 
 
 class Mokepon{
-    constructor(nombre,foto,vida){
+    constructor(nombre, foto, vida){
         this.nombre = nombre
         this.foto = foto
         this.vida = vida
@@ -37,12 +39,12 @@ class Mokepon{
     }
 }
 
-let hipodoge = new Mokepon('Hipodoge','./imagenes/hipodoge_attack.png','5')
+let hipodoge = new Mokepon('Hipodoge','./imagenes/hipodoge_attack.png',5)
 
 let capipepo = new
-Mokepon('Capipepo','./imagenes/capipepo_attack.png','3')
+Mokepon('Capipepo','./imagenes/capipepo_attack.png',5)
 
-let ratigueya = new Mokepon('Ratyguella','./imagenes/ratigueya_attack.png','3')
+let ratigueya = new Mokepon('Ratigueya','./imagenes/ratigueya_attack.png',5)
 
 hipodoge.ataques.push( //Se inyecta la info de los ataques en sus arreglo de ataques  
     {nombre:'💧', id: 'btnAgua'},
@@ -53,6 +55,14 @@ hipodoge.ataques.push( //Se inyecta la info de los ataques en sus arreglo de ata
 )
 
 capipepo.ataques.push(
+    {nombre:'🌱', id: 'btnTierra'},
+    {nombre:'🌱', id: 'btnTierra'},
+    {nombre:'🌱', id: 'btnTierra'},
+    {nombre:'🔥', id: 'btnFuego'},
+    {nombre:'💧', id: 'btnAgua'},
+)
+
+ratigueya.ataques.push(
     {nombre:'🔥', id: 'btnFuego'},
     {nombre:'🔥', id: 'btnFuego'},
     {nombre:'🔥', id: 'btnFuego'},
@@ -60,16 +70,26 @@ capipepo.ataques.push(
     {nombre:'🌱', id: 'btnTierra'},
 )
 
-ratigueya.ataques.push(
-    {nombre:'🌱', id: 'btnTierra'},
-    {nombre:'🌱', id: 'btnTierra'},
-    {nombre:'🌱', id: 'btnTierra'},
-    {nombre:'🔥', id: 'btnFuego'},
-    {nombre:'💧', id: 'btnAgua'},
-    )
+// arreglo 
+    mokepones.push(hipodoge, capipepo, ratigueya)
+        // se genera el push de cada unode los mokepones de cada arreglo q se trabajo anteriormente
 function iniciarJuego() { 
     sectionSeleccionarAtaque.style.display = 'none' // ocultar secciones de html que no ocupemos hasta despues // se oculta el boton de reiniciar
-    selecionarMascota.addEventListener('click', seleccionarMascotaJugador);
+    //Por cada uno de los elementos del arreglo has algo!
+    mokepones.forEach((mokepon) =>{
+    opcionDeMokepones =`
+    <input type="radio" name="mascotas" id=${mokepon.nombre} />
+    <label class="tarjeta-mokepon" for=${mokepon.nombre}>
+        <p>${mokepon.nombre}</p>
+        <img src=${mokepon.foto} alt=${mokepon.nombre}>
+    </label>
+    `
+tarjetasContenedor.innerHTML += opcionDeMokepones
+
+
+    })
+
+    selecionarMascota.addEventListener('click',                 seleccionarMascotaJugador);
    
     botonFuego.addEventListener('click', ataqueFuego)
     botonAgua.addEventListener('click', ataqueAgua)
@@ -100,13 +120,13 @@ function seleccionarMascotaEnemigo() {
     
 
     if (mascotaAleatoria == 1){
-        spanMascotaEnemigo.innerHTML = 'Hipodoge '
+        spanMascotaEnemigo.innerHTML = 'hipodoge'
 
     }else if (mascotaAleatoria == 2){
-        spanMascotaEnemigo.innerHTML = 'Capipepo '
+        spanMascotaEnemigo.innerHTML = 'capipepo'
 
     }else {
-        spanMascotaEnemigo.innerHTML = 'Ratigueya '
+        spanMascotaEnemigo.innerHTML = 'Ratigueya'
     }
 }
 
