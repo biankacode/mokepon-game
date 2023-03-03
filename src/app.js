@@ -20,14 +20,15 @@ const contenedorAtaques = document.getElementById('contenedorAtaques')
 
 
 let mokepones = []
-let ataqueJugador 
-let ataqueEnemigo
+let ataqueJugador = []
+let ataqueEnemigo = []
 let opcionDeMokepones
 let inputhHipodoge
 let inputCapipepo
 let inputRatigueya 
 let mascotaJugador
 let ataquesMokepon
+let ataquesMokeponEemigo
 let botonFuego  
 let botonAgua 
 let botonTierra
@@ -165,30 +166,33 @@ function secuenciaAtaque() {
                 console.log(atakJugador);
                 boton.style.background = '#EAC7C7'
             }
+            ataqueAleatorioEnemigo()
         })
     })
+    
 }
 
 function seleccionarMascotaEnemigo() {
     let mascotaAleatoria = aleatorio(0, mokepones.length -1)
     spanMascotaEnemigo.innerHTML = mokepones[mascotaAleatoria].nombre
+    ataquesMokeponEemigo = mokepones[mascotaAleatoria].ataques
     secuenciaAtaque()
 }
 
 function ataqueAleatorioEnemigo() {
-    let ataqueAleatorio = aleatorio(1,3)
+    let ataqueAleatorio = aleatorio(0,ataquesMokeponEemigo.length -1)
     /* console.log(ataqueAleatorio, 'Si sirve'); */
 
-    if (ataqueAleatorio == 1) {
-        ataqueEnemigo = 'FUEGO'
+    if (ataqueAleatorio == 0 || ataqueAleatorio == 1) {
+        ataqueEnemigo.push('FUEGO')
     }
-    else if(ataqueAleatorio == 2){
-        ataqueEnemigo = 'AGUA'
+    else if(ataqueAleatorio == 3 || ataqueAleatorio ==  4){
+        ataqueEnemigo.push('AGUA')
     }
     else {
-        ataqueEnemigo = 'TIERRRA'
+        ataqueEnemigo.push('TIERRRA')
     }
-  
+   
     combate()
 }
 
